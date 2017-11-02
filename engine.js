@@ -55,11 +55,11 @@ module.exports = function (options) {
           message: '请选择要提交的修改类型:\n',
           choices: choices
         }
-        , {
-          type: 'input',
-          name: 'scope',
-          message: '此次修改的影响范围是？ (比如：模块或者文件名字)? (回车跳过)\n'
-        }
+        // , {
+        //   type: 'input',
+        //   name: 'scope',
+        //   message: '此次修改的影响范围是？ (比如：模块或者文件名字)? (回车跳过)\n'
+        // }
         , {
           type: 'input',
           name: 'subject',
@@ -105,7 +105,8 @@ module.exports = function (options) {
         };
 
         // parentheses are only needed when a scope is present
-        var scope = answers.scope.trim();
+        // var scope = answers.scope.trim();
+        var scope = '';
         scope = scope ? '(' + answers.scope.trim() + ')' : '';
 
         // Hard limit this line
